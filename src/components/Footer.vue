@@ -1,5 +1,5 @@
 <template>
-<footer class="text-center text-white" style="background: rgba(128, 128, 128, 0.185);
+<footer class="text-center text-white" style="background: grey;
 ">
   <!-- Grid container -->
   <div class="container pt-4">

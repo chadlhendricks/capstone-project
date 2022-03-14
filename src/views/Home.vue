@@ -1,5 +1,7 @@
 <template>
 <Landing/>
+<Footer/>
+
 </template>
 
 <script>

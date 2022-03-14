@@ -1,18 +1,24 @@
 <template lang="">
   <section>
     <div class="row">
+
+      <!-- Panel 1 -->
       <div class="col-4" id="col1">
-        <div class="window"></div>
+        <div class="panel1"></div>
       </div>
 
+      <!-- Stories -->
       <div class="col-4" id="col2">
-        <div id="main-stories">
-          <div class="col-3"><img src="@/assets/logo.png" class="logo" alt=""></div>
-          <div class="col-3"><img src="@/assets/logo.png" class="logo" alt=""></div>
-          <div class="col-3"><img src="@/assets/logo.png" class="logo" alt=""></div>
-          <div class="col-3"><img src="@/assets/logo.png" class="logo" alt=""></div>
+        <div class="main-stories">
+          <img src="https://picsum.photos/200/300?random=1" class="logo" alt="">
+          <img src="https://picsum.photos/200/300?random=2" class="logo" alt="">
+          <img src="https://picsum.photos/200/300?random=3" class="logo" alt="">
+          <img src="https://picsum.photos/200/300?random=4" class="logo" alt="">
+          <img src="https://picsum.photos/200/300?random=5" class="logo" alt="">
+          <img src="https://picsum.photos/200/300?random=6" class="logo" alt="">
         </div>
 
+      <!-- What's on your mind? -->
         <div class="main-feeling">
           <div class="container">
             <form>
@@ -34,13 +40,19 @@
           </div>
         </div>
 
+      <!-- Posts -->
         <div class="main-window"></div>
       </div>
 
+      <!-- Panel 3 -->
       <div class="col-4" id="col3">
-        <div class="window"></div>
+        <div class="panel3"></div>
+        <div class="panel4"></div>
+
       </div>
+
     </div>
+
   </section>
 </template>
 
@@ -50,18 +62,32 @@ export default {};
 
 <style scoped>
 
-.logo {
-  background: grey;
-  border-radius: 25px;
-  height: 100px;
-  display: inline-block;
+section {
+  background: black;
+  height: 160vh;
 }
 
-#main-stories {}
+.main-stories {
+  background: red;
+  padding-top: 5px
+  }
+
+.sidepanels {
+  border: 2px solid red;
+}
+
+.logo {
+  background: grey;
+  border-radius: 17px;
+  height: 160px;
+  display: inline-block;
+  width: 15%;
+  margin: 5px;
+}
 
 .row {
   height: 100vh;
-  margin-top: 20px;
+  padding-top: 35px;
 }
 
 .container {
@@ -73,6 +99,7 @@ export default {};
   height: 20vh;
   width: 100%;
   border-radius: 25px;
+  border: 1px solid gray;
   background: rgba(128, 128, 128, 0.185);
 }
 
@@ -82,6 +109,7 @@ export default {};
   width: 100%;
   border-radius: 25px;
   background: rgba(128, 128, 128, 0.185);
+  border: 1px solid gray;
 }
 
 .main-window {
@@ -90,13 +118,36 @@ export default {};
   width: 100%;
   border-radius: 25px;
   background: rgba(128, 128, 128, 0.185);
+    border: 1px solid gray;
+
 }
 
-.window {
+.panel1 {
   margin: auto;
-  height: 100vh;
+  height: 100%;
   width: 80%;
   border-radius: 25px;
-  background: rgba(128, 128, 128, 0.418);
+  border: 1px solid gray;
+  background: rgba(128, 128, 128, 0.185);
 }
+
+.panel3 {
+  margin: auto;
+  height: 20vh;
+  width: 80%;
+  border-radius: 25px;
+  border: 1px solid gray;
+  background: rgba(128, 128, 128, 0.185);
+}
+
+.panel4 {
+  margin: auto;
+  height: 100%;
+  width: 80%;
+  padding-top: 25px;
+  border-radius: 25px;
+  border: 1px solid gray;
+  background: rgba(128, 128, 128, 0.185);
+}
+
 </style>

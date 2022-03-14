@@ -1,5 +1,6 @@
 <template>
-<footer class="text-center text-white" style="background-color: #f1f1f1;">
+<footer class="text-center text-white" style="background: rgba(128, 128, 128, 0.185);
+">
   <!-- Grid container -->
   <div class="container pt-4">
     <!-- Section: Social media -->

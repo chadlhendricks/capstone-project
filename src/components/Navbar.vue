@@ -1,6 +1,6 @@
 <template lang="">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Container wrapper -->
     <div class="container">
       <!-- Navbar brand -->
@@ -38,10 +38,10 @@
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-          <a type="button" href="/login" class="btn btn-link px-3 me-2">
+          <a type="button" href="/login" class="btn btn-link px-3 me-2" style="color: white">
             Login
           </a>
-          <a type="button" class="btn btn-primary me-3"> Sign up for free </a>
+          <a type="button" class="btn bg-dark me-3" style="color: white"> Sign up for free </a>
         </div>
       </div>
       <!-- Collapsible wrapper -->
@@ -54,6 +54,9 @@
 export default {};
 </script>
 
-<style lang="">
+<style>
+a {
+  color: white;
+}
 
 </style>

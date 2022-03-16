@@ -2,7 +2,7 @@
   <section>
     <div class="row">
       <!-- Panel 1 -->
-      <div class="col-4" id="col1">
+      <div class="col-md-4 mb-5" id="col1">
         <div class="panel1">
           <h1>Categories</h1>
 
@@ -19,7 +19,7 @@
       </div>
 
       <!-- Stories -->
-      <div class="col-4" id="col2">
+      <div class="col-md-4 mb-5" id="col2">
         <div class="main-stories">
           <img
             src="https://picsum.photos/200/300?random=1"
@@ -83,7 +83,7 @@
       </div>
 
       <!-- Panel 3 -->
-      <div class="col-4" id="col3">
+      <div class="col-md-4 mb-5" id="col3">
         <div class="panel3">
           <h1>Popular Posts</h1>
         </div>
@@ -184,6 +184,10 @@ h1 {
   text-align: start;
   font-size: 20px;
   color: white;
+  border: 2px white solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
 #col1 {

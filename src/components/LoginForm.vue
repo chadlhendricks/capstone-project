@@ -1,5 +1,4 @@
 <template>
-<section>
  <section>
     <form @submit.prevent="login" class="form neu-border">
       <h2 class="form-heading">Login</h2>
@@ -31,7 +30,6 @@
       </p>
     </form>
   </section>
-</section>
 </template>
 
 <script>

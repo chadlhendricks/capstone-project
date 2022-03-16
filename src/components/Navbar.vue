@@ -38,11 +38,26 @@
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-          <a type="button" href="/login" class="btn btn-link px-3 me-2" style="color: white">
+          <a
+            type="button"
+            href="/login"
+            class="btn btn-link px-3 me-2"
+            style="color: white"
+          >
             Login
           </a>
-          <a type="button" class="btn bg-dark me-3" style="color: white"> Sign up for free </a>
-          <i class="bi bi-person-circle" style="color: #4361EE"></i>
+          <a type="button" class="btn bg-dark me-3" style="color: white">
+            Sign up for free
+          </a>
+          <i class="bi bi-person-circle" style="color: #4361ee"></i>
+          <a
+            type="button"
+            href="/contact"
+            class="btn btn-link px-3 me-2"
+            style="color: white"
+          >
+            Contact
+          </a>
         </div>
       </div>
       <!-- Collapsible wrapper -->
@@ -63,5 +78,4 @@ a {
 .navbar {
   background: rgba(22, 22, 22, 0.938);
 }
-
 </style>

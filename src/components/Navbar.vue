@@ -4,9 +4,9 @@
     <!-- Container wrapper -->
     <div class="container">
       <!-- Navbar brand -->
-      <a class="navbar-brand me-2" href="https://mdbgo.com/">
+      <a class="navbar-brand me-2" href="/">
         <img
-          src="https://static-cdn.jtvnw.net/jtv_user_pictures/3635d825-81d0-496d-bad4-64305d4a8393-profile_image-300x300.png"
+          src="../assets/images/logo.png"
           height="25px"
           alt="MDB Logo"
           loading="lazy"
@@ -31,9 +31,6 @@
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/" style="color: white">Theddit</a>
-          </li>
         </ul>
         <!-- Left links -->
 
@@ -49,7 +46,7 @@
           <a type="button" class="btn bg-dark me-3" style="color: white">
             Sign up for free
           </a>
-          <i class="bi bi-person-circle" style="color: #4361ee"></i>
+          <i class="bi bi-person-circle" style="color: #FB8500"></i>
           <a
             type="button"
             href="/contact"

@@ -1,144 +1,130 @@
 <template>
 <section>
-  <div class="sections">
-
-    <h1 class="headings">Contact Me</h1><br>
-
-    <!--CONTACT BUTTONS-->
-
-    <div class="row" id="buttanim" style="text-align: center">
-      <div class='col-md-4 mb-5'>
-        <i class="bi bi-geo-alt"></i><br>
-        <p class="titles">Location</p>
-        <p>Cape Town, South Africa  </p>
-      </div>
-
-      <div class='col-md-4 mb-5'>
-        <i class="bi bi-envelope"></i><br>
-        <p class="titles">Email</p>
-        <p>chadlhendricks@gmail.com</p>
-      </div>
-
-      <div class='col-md-4 mb-5'>
-        <i class="bi bi-phone"></i><br>
-        <p class="titles">Call Me On</p>
-        <p>+27 67 020 2386</p>
-      </div>
+  <div class="wrapper">
+  <div class="title">
+    <h1>contact us form</h1>
+  </div>
+  <div class="contact-form">
+    <div class="input-fields">
+      <input type="text" class="input" placeholder="Name">
+      <input type="text" class="input" placeholder="Email Address">
+      <input type="text" class="input" placeholder="Phone">
+      <input type="text" class="input" placeholder="Subject">
     </div>
-
-
-
-    <!-- END OF CONTACT BUTTONS-->
-
-       <!-- <div class="contactform col-sm-6" style="font-size: 20px;"> -->
-
-       <!-- <form action="https://formspree.io/f/xzbywdvz" method="POST"> -->
-
-
-
-    <!-- FORM  -->
-   <div class="contactform col-sm-6" style="font-size: 20px;">
-
-        <form @submit.prevent="handleSubmit">
-          
-          <div class="row">
-            <div class="mb-3 col-6">
-              <input type="text" class="form-control" id="fullname" name="fullname" aria-describedby="emailHelp" required="" placeholder="Name*">
-            </div>
-
-            <div class="mb-3 col-6">
-              <input type="email" class="form-control" id="exampleInputEmail1" name="emailaddress" aria-describedby="emailHelp" required="" placeholder="Email Address*">
-            </div>
-          </div><br>
-
-          <div class="mb-3">
-              <input type="textarea" class="form-control" id="subjectbox" name="subject" required="" placeholder="Subject*">
-          </div><br>
-
-           <div class="mb-3">
-              <input type="textarea" class="form-control" id="messagebox" name="message" required="" placeholder="Your Message*">
-          </div><br>
-
-          <div class="mb-3 form-check" style="text-align:center">
-            <button type="submit" class="btn btn-warning">Submit</button>
-            <button type="reset" class="btn btn-danger">Reset</button>
-
-          </div>
-  
-        </form>
-
+    <div class="msg">
+      <textarea placeholder="Message"></textarea>
+      <div class="btn">send</div>
     </div>
-    <!-- END OF FORM -->
-
-      </div>
+  </div>
+</div>
 </section>
 
 
 </template>
 
-
 <script>
-
-
-
 
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-.sections {
-    background-color: black;
-    height: 120vh;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
 }
 
-.titles{
-  color: #fca311ff;
-  font-size: 20px;
+section {
+  height: 75vh;
+  background: grey;
 }
 
-#messagebox{
-  height: 100px;
+.wrapper{
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 550px;
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-input{
-  border-radius: 25px;
-  border: none;
+.wrapper .title h1{
+  color: #FB8500;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.row{
-  color: white;
+.contact-form{
+  display: flex;
 }
 
-.contactform.col-sm-6 {
-    padding-top: 100px;
-    margin: auto;
-    width: 80%;
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
 }
 
-label {
-  color: white;
+.input-fields,
+.msg{
+  width: 48%;
 }
 
-.form-control {
-  height: 45px
+.input-fields .input,
+.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #FB8500;
+  padding: 10px;
+  color: black;
+  width: 100%;
 }
 
-
-/* BUTTONS AND THINGS */
-
-.bi{
-  color: crimson;
-  font-size: 50px;
+.msg textarea{
+  height: 212px;
 }
 
-.d-block{
-  border-radius: 25px;
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: grey;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: grey;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: grey;
 }
 
-.w-30{
-  border-radius: 50%;
-  margin-bottom: 50px;
-  padding-top: 50px;
+.btn {
+    background: #FB8500;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
 }
 
 </style>

@@ -53,7 +53,7 @@ footer {
 }
 
 .bi:hover {
-  color: red
+  color: #FB8500;
 }
   
 </style>

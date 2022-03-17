@@ -1,18 +1,16 @@
 <template>
-<Landing/>
+<HomePage/>
 <Footer/>
-
 </template>
 
 <script>
-import Landing from "@/components/Landing.vue";
+import HomePage from "@/components/HomePage.vue";
 import Footer from "@/components/Footer.vue";
-
 
 export default {
   name: "Home",
   components: {
-    Landing, Footer
+    HomePage, Footer
   },
 };
 </script>

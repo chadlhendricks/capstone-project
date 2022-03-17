@@ -205,7 +205,7 @@ h1 {
 }
 
 .btn-primary {
-  background-color: #4361ee;
+  background-color: #FB8500;
 }
 
 li {

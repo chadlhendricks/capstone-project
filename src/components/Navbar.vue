@@ -30,23 +30,10 @@
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-          <a
-            type="button"
-            href="/login"
-            class="btn btn-link px-3 me-2"
-            style="color: white"
-          >
-            Login
-          </a>
-          <a type="button" class="btn bg-dark me-3" style="color: white">
-            Sign up for free
-          </a>
-          <i class="bi bi-person-circle" style="color: #FB8500"></i>
           <a
             type="button"
             href="/contact"
@@ -55,6 +42,7 @@
           >
             Contact
           </a>
+          <i class="bi bi-person-circle" style="color: #fb8500"></i>
         </div>
       </div>
       <!-- Collapsible wrapper -->
@@ -63,6 +51,7 @@
   </nav>
   <!-- Navbar -->
 </template>
+
 <script>
 export default {};
 </script>
@@ -73,6 +62,6 @@ a {
 }
 
 .navbar {
-  background: rgba(22, 22, 22, 0.938);
+  background: rgb(26, 26, 26);
 }
 </style>

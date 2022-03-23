@@ -18,6 +18,7 @@
         </div>
       </div>
 
+      <!-- Panel2 -->
       <!-- Stories -->
       <div class="col-md-4 mb-5" id="col2">
         <div class="main-stories">
@@ -79,7 +80,18 @@
         <br />
 
         <!-- Posts -->
-        <div class="main-window"></div>
+        <div class="main-window">
+          <div class="card" v-for="item in items" :key="item.message">
+             <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+             <div class="card-body">
+             <h5 class="card-title">Card title</h5>
+             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             <a href="#!" class="btn btn-primary">Button</a>
+         </div>
+      </div>
+
+         </div>
+
       </div>
 
       <!-- Panel 3 -->
@@ -95,7 +107,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      tests: null,
+    };
+  },
+  mounted() {
+    fetch("https://localhost:4000/api/tests")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+
+        this.tests = data;
+      });
+  },
+};
 </script>
 
 <style scoped>
@@ -144,7 +173,7 @@ section {
 }
 
 .main-window {
-  height: 80vh;
+  min-height: 80vh;
   width: 100%;
   border-radius: 25px;
   background: rgba(128, 128, 128, 0.26);

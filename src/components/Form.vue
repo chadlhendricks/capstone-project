@@ -10,7 +10,7 @@
   <input type="password" id="password" name="password" placeholder="Enter your password.." autocomplete="off" required />
 
   <p class="forgot">New user?</p>
-  <a class="register" href="#">Register</a>
+  <a class="register" href="/posts">Register</a>
 
   <input type="submit" name="submit" value="Log In" />
 
@@ -125,7 +125,6 @@ input[type="submit"]:active {
 #logo {
   margin:0 auto;
   width:200px;
-  font-family:'Lily Script One', cursive;
   font-size:60px;
   font-weight:bold;
   text-align:center;

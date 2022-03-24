@@ -59,22 +59,24 @@
         <div class="main-feeling">
           <div class="container">
             <form>
-              <div class="form-group">
-                <h1>News Feed</h1>
-                <textarea
-                  class="form-control status-box"
-                  rows="2"
-                  placeholder="What's on your mind?"
-                ></textarea>
+              <div style="display:inline-block;vertical-align:top; width: 100%">
+                <img src="https://picsum.photos/50/50?random=5" style="border-radius: 50%; display: inline-block" alt=""/>
+                
+                <div style="display:inline-block;vertical-align:top;">
+                  <textarea style="resize: none;" class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
+                </div>
+               
               </div>
+
             </form>
-            <br />
+            <br>
+
+  
 
             <div class="button-group pull-right">
               <a href="#" class="btn btn-primary">Post</a>
             </div>
 
-            <ul class="posts"></ul>
           </div>
         </div>
         <br />
@@ -139,10 +141,14 @@ section {
 
 .logo {
   border-radius: 17px;
-  height: 160px;
+  height: 170px;
   display: inline-block;
   width: 15%;
   margin: 5px;
+}
+
+.logo:hover {
+  transform: scale(1.09);
 }
 
 .row {
@@ -160,7 +166,6 @@ section {
   height: 20vh;
   width: 100%;
   border-radius: 25px;
-  border: 1px solid gray;
   background: rgba(128, 128, 128, 0.26);
 }
 
@@ -169,7 +174,6 @@ section {
   width: 100%;
   border-radius: 25px;
   background: rgba(128, 128, 128, 0.26);
-  border: 1px solid gray;
 }
 
 .main-window {
@@ -177,7 +181,6 @@ section {
   width: 100%;
   border-radius: 25px;
   background: rgba(128, 128, 128, 0.26);
-  border: 1px solid gray;
 }
 
 .panel1 {
@@ -186,7 +189,6 @@ section {
   height: 100%;
   width: 80%;
   border-radius: 25px;
-  border: 1px solid gray;
   background: rgba(128, 128, 128, 0.26);
 }
 
@@ -196,7 +198,6 @@ section {
   height: 15vh;
   width: 80%;
   border-radius: 25px;
-  border: 1px solid gray;
   background: rgba(128, 128, 128, 0.26);
 }
 
@@ -205,7 +206,6 @@ section {
   height: 100%;
   width: 80%;
   border-radius: 25px;
-  border: 1px solid gray;
   background: rgba(128, 128, 128, 0.26);
 }
 
@@ -213,13 +213,12 @@ h1 {
   text-align: start;
   font-size: 20px;
   color: white;
-  border: 2px white solid;
   border-left: none;
   border-right: none;
   border-top: none;
 }
 
-#col1 {
+/* #col1 {
   border: 1px solid gray;
   border-top: none;
   border-left: none;
@@ -231,7 +230,7 @@ h1 {
   border-top: none;
   border-right: none;
   border-bottom: none;
-}
+} */
 
 .btn-primary {
   background-color: #FB8500;
@@ -240,4 +239,16 @@ h1 {
 li {
   text-align: start;
 }
+
+textarea {
+  border: none;
+  background: grey;
+  border-radius: 25px;
+  height: 35px;
+}
+
+::placeholder {
+    color: whitesmoke;
+}
+
 </style>

@@ -1,5 +1,6 @@
 <template lang="">
   <!-- Navbar -->
+  <div class="topbar"></div>
   <nav class="navbar navbar-expand-lg">
     <!-- Container wrapper -->
     <div class="container">
@@ -63,5 +64,11 @@ a {
 
 .navbar {
   background: rgb(26, 26, 26);
+  height: 45px;
+}
+
+.topbar {
+  height: 5px;
+  background: rgb(0, 38, 255)
 }
 </style>

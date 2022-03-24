@@ -43,7 +43,7 @@ export default {
 .background {
   width: 100%;
   height: 80vh;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
 }
 
 #firstcol {

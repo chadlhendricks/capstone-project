@@ -187,7 +187,7 @@ section {
 }
 
 .card-title {
-  text-align: start;
+  text-align: center;
 }
 
 .card {

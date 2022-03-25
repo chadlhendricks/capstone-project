@@ -1,16 +1,16 @@
 <template>
-<HomePage/>
-<Footer/>
+<Navbar/>
+<Landing/>
 </template>
 
 <script>
-import HomePage from "@/components/HomePage.vue";
-import Footer from "@/components/Footer.vue";
+import Navbar from "@/components/Navbar.vue";
+import Landing from "@/components/Landing.vue";
 
 export default {
   name: "Home",
   components: {
-    HomePage, Footer
+    Navbar, Landing, 
   },
 };
 </script>

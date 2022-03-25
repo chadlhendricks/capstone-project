@@ -19,6 +19,7 @@
       </div>
 
       <!-- Panel2 -->
+
       <!-- Stories -->
       <div class="col-md-4 mb-5" id="col2">
         <div class="main-stories">
@@ -57,32 +58,9 @@
 
         <!-- What's on your mind? -->
         <div class="main-feeling">
+
           <div class="container">
-            <form>
-              <div
-                style="display: inline-block; vertical-align: top; width: 100%"
-              >
-                <img
-                  src="https://picsum.photos/50/50?random=5"
-                  style="border-radius: 50%; display: inline-block"
-                  alt=""
-                />
-
-                <div style="display: inline-block; vertical-align: top">
-                  <textarea
-                    style="resize: none"
-                    class="form-control status-box"
-                    rows="2"
-                    placeholder="What's on your mind?"
-                  ></textarea>
-                </div>
-              </div>
-            </form>
-            <br />
-
-            <div class="button-group pull-right">
-              <a href="#" class="btn btn-primary">Post</a>
-            </div>
+       
           </div>
         </div>
         <br />
@@ -93,9 +71,10 @@
           <div class="card" v-for="post in posts" :key="posts.UserId">
             <img :src="post.img" class="card-img-top" alt="No Image" />
             <div class="card-body">
+              <img :src="post.user.profilePicture" class="profilepics" alt="">
               <h5 class="card-title" v-if="post.user">{{ post.user.username }}</h5>
               <p class="card-text">{{ post.desc }}</p>
-              <p class="card-text">{{ post.likes }}</p>
+              <p class="card-text">{{ post.likes.length }} likes</p>
             </div>
           </div>
           <!--End of Card  -->
@@ -121,21 +100,7 @@ export default {
       posts: null,
     };
   },
-  mounted() {
-    fetch("http://localhost:4000/api/posts/", {
-      method: "GET",
-      header: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-
-        this.posts = data;
-      });
+  mounted() { 
     fetch("http://localhost:4000/api/posts/", {
       method: "GET",
       header: {
@@ -160,38 +125,31 @@ export default {
       });
   },
 };
-
-// export default {
-//   data() {
-//     return {
-//       posts: null,
-//     };
-//   },
-//   mounted() {
-//     fetch('http://localhost:4000/api/posts/',{
-//       method: "GET",
-//       headers: {
-//         "Content-type": "application/json; charset=utf-8",
-//       },
-//     })
-//   .then((response) => response.json())
-//   .then((json) => console.log(json));
-//   },
-// };
 </script>
 
 <style scoped>
 section {
-  background: black;
-  min-height: 200vh;
+  background: #DAE0E6;
+  min-height: 400vh;
 }
 
-.card-title {
-  text-align: center;
+.profilepics {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  float: left;
 }
 
 .card {
   margin-top: 20px;
+}
+
+.card-title {
+    text-align: start;
+}
+
+.card-text {
+  text-align: start;
 }
 
 .main-stories {
@@ -224,22 +182,21 @@ section {
   margin: auto;
   height: 20vh;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 10px;
   background: rgba(128, 128, 128, 0.26);
 }
 
 .main-stories {
   height: 20vh;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 10px;
   background: rgba(128, 128, 128, 0.26);
 }
 
 .main-window {
   min-height: 80vh;
   width: 100%;
-  border-radius: 25px;
-  background: rgba(128, 128, 128, 0.26);
+  border-radius: 10px;
 }
 
 .panel1 {
@@ -247,7 +204,7 @@ section {
   padding: 20px;
   height: 1;
   width: 80%;
-  border-radius: 25px;
+  border-radius: 10px;
   background: rgba(128, 128, 128, 0.26);
 }
 
@@ -256,7 +213,7 @@ section {
   padding: 20px;
   height: 15vh;
   width: 80%;
-  border-radius: 25px;
+  border-radius: 10px;
   position: fixed;
   background: rgba(128, 128, 128, 0.26);
 }
@@ -265,7 +222,7 @@ section {
   margin: auto;
   height: 30%;
   width: 80%;
-  border-radius: 25px;
+  border-radius: 10px;
   margin-top: 10%;
   position: fixed;
   background: rgba(128, 128, 128, 0.26);

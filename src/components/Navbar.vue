@@ -1,11 +1,8 @@
-<template lang="">
-  <!-- Navbar -->
-  <div class="topbar"></div>
-  <nav class="navbar navbar-expand-lg">
-    <!-- Container wrapper -->
-    <div class="container">
-      <!-- Navbar brand -->
-      <a class="navbar-brand me-2" href="/">
+<template>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
         <img
           src="../assets/images/logo.png"
           height="25px"
@@ -13,67 +10,136 @@
           loading="lazy"
           style="margin-top: -1px"
         />
-      </a>
-
-      <!-- Toggle button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarButtonsExample"
-        aria-controls="navbarButtonsExample"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarButtonsExample">
-        <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-        <!-- Left links -->
-
-        <div class="d-flex align-items-center">
-          <a
-            type="button"
-            href="/contact"
-            class="btn btn-link px-3 me-2"
-            style="color: white"
-          >
-            Contact
-          </a>
-          <i class="bi bi-person-circle" style="color: #fb8500"></i>
-        </div>
-      </div>
-      <!-- Collapsible wrapper -->
     </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <router-link @click="toggleNav" :to="{ name: 'Login' }">Login</router-link>
+    <router-link @click="toggleNav" :to="{ name: 'Register' }"
+      >Register</router-link
+    >
+  </div>
+</div>
 </template>
 
-<script>
-export default {};
-</script>
+<script>  
+</script>  
 
-<style>
-a {
-  color: white;
+<style scoped>
+* {
+  box-sizing: border-box;
 }
 
-.navbar {
-  background: rgb(26, 26, 26);
-  height: 45px;
-  position: fixed;
+router-link {
+  color: red;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
   width: 100%;
+  background-color: #FFFFFF;
+  position: fixed;
   z-index: 200;
 }
 
-.topbar {
-  height: 5px;
-  background: rgb(0, 38, 255);
-  position: fixed;
-  width: 100%;
+.nav > .nav-header {
+  display: inline;
 }
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  color: red;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: #FFFFFF;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
 </style>
+
+  
+  
+  
+  

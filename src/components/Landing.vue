@@ -59,41 +59,47 @@
         <div class="main-feeling">
           <div class="container">
             <form>
-              <div style="display:inline-block;vertical-align:top; width: 100%">
-                <img src="https://picsum.photos/50/50?random=5" style="border-radius: 50%; display: inline-block" alt=""/>
-                
-                <div style="display:inline-block;vertical-align:top;">
-                  <textarea style="resize: none;" class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
+              <div
+                style="display: inline-block; vertical-align: top; width: 100%"
+              >
+                <img
+                  src="https://picsum.photos/50/50?random=5"
+                  style="border-radius: 50%; display: inline-block"
+                  alt=""
+                />
+
+                <div style="display: inline-block; vertical-align: top">
+                  <textarea
+                    style="resize: none"
+                    class="form-control status-box"
+                    rows="2"
+                    placeholder="What's on your mind?"
+                  ></textarea>
                 </div>
-               
               </div>
-
             </form>
-            <br>
-
-  
+            <br />
 
             <div class="button-group pull-right">
               <a href="#" class="btn btn-primary">Post</a>
             </div>
-
           </div>
         </div>
         <br />
 
         <!-- Posts -->
-        <div class="main-window">
-          <div class="card" v-for="item in items" :key="item.message">
-             <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
-             <div class="card-body">
-             <h5 class="card-title">Card title</h5>
-             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <a href="#!" class="btn btn-primary">Button</a>
-         </div>
-      </div>
-
-         </div>
-
+        <div class="main-window" v-if="posts">
+          <!--Start of Card  -->
+          <div class="card" v-for="post in posts" :key="posts.UserId">
+            <img :src="post.img" class="card-img-top" alt="No Image" />
+            <div class="card-body">
+              <h5 class="card-title" v-if="post.user">{{ post.user.username }}</h5>
+              <p class="card-text">{{ post.desc }}</p>
+              <p class="card-text">{{ post.likes }}</p>
+            </div>
+          </div>
+          <!--End of Card  -->
+        </div>
       </div>
 
       <!-- Panel 3 -->
@@ -112,27 +118,80 @@
 export default {
   data() {
     return {
-      tests: null,
+      posts: null,
     };
   },
   mounted() {
-    fetch("https://localhost:4000/api/tests")
+    fetch("http://localhost:4000/api/posts/", {
+      method: "GET",
+      header: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         console.log(data);
 
-        this.tests = data;
+        this.posts = data;
+      });
+    fetch("http://localhost:4000/api/posts/", {
+      method: "GET",
+      header: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        data.forEach(async item => {
+          const response =  await fetch("http://localhost:4000/api/users/" + item.userId)
+          const person = await response.json()
+          console.log(person)
+          item.user = person
+        })
+
+        console.log(data)
+        this.posts = data;
+
       });
   },
 };
+
+// export default {
+//   data() {
+//     return {
+//       posts: null,
+//     };
+//   },
+//   mounted() {
+//     fetch('http://localhost:4000/api/posts/',{
+//       method: "GET",
+//       headers: {
+//         "Content-type": "application/json; charset=utf-8",
+//       },
+//     })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+//   },
+// };
 </script>
 
 <style scoped>
 section {
   background: black;
-  height: 160vh;
+  min-height: 200vh;
+}
+
+.card-title {
+  text-align: start;
+}
+
+.card {
+  margin-top: 20px;
 }
 
 .main-stories {
@@ -153,7 +212,7 @@ section {
 
 .row {
   height: 100vh;
-  padding-top: 35px;
+  padding-top: 60px;
   display: flex;
 }
 
@@ -186,7 +245,7 @@ section {
 .panel1 {
   margin: auto;
   padding: 20px;
-  height: 100%;
+  height: 1;
   width: 80%;
   border-radius: 25px;
   background: rgba(128, 128, 128, 0.26);
@@ -198,14 +257,17 @@ section {
   height: 15vh;
   width: 80%;
   border-radius: 25px;
+  position: fixed;
   background: rgba(128, 128, 128, 0.26);
 }
 
 .panel4 {
   margin: auto;
-  height: 100%;
+  height: 30%;
   width: 80%;
   border-radius: 25px;
+  margin-top: 10%;
+  position: fixed;
   background: rgba(128, 128, 128, 0.26);
 }
 
@@ -233,7 +295,7 @@ h1 {
 } */
 
 .btn-primary {
-  background-color: #FB8500;
+  background-color: #fb8500;
 }
 
 li {
@@ -248,7 +310,6 @@ textarea {
 }
 
 ::placeholder {
-    color: whitesmoke;
+  color: whitesmoke;
 }
-
 </style>

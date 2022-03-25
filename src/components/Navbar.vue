@@ -65,10 +65,15 @@ a {
 .navbar {
   background: rgb(26, 26, 26);
   height: 45px;
+  position: fixed;
+  width: 100%;
+  z-index: 200;
 }
 
 .topbar {
   height: 5px;
-  background: rgb(0, 38, 255)
+  background: rgb(0, 38, 255);
+  position: fixed;
+  width: 100%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section>
     <form @submit.prevent="login" class="form neu-border">
-      <h2 class="form-heading">Login</h2>
+      <h2 class="form-heading" style="color: #00a1ff">Login</h2>
       <input
         class="form-input neu-border-inset"
         type="email"

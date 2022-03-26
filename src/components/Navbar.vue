@@ -21,9 +21,9 @@
   </div>
   
   <div class="nav-links">
-    <a href="/login" style="color:blue">Login</a>
-    <a href="/register" style="color:blue">Register</a>
-    <a href="/contact" style="color:blue">Contact</a>
+    <a href="/login" style="color:#00a1ff">Login</a>
+    <a href="/register" style="color:#00a1ff">Register</a>
+    <a href="/contact" style="color:#00a1ff">Contact</a>
   </div>
 </div>
 </template>
@@ -34,6 +34,10 @@
 <style scoped>
 * {
   box-sizing: border-box;
+}
+
+span {
+  background-color: #00a1ff;
 }
 
 a {
@@ -48,7 +52,7 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #DAE0E6;
   position: fixed;
   z-index: 200;
 }

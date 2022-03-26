@@ -1,7 +1,7 @@
 <template>
   <section>
     <form @submit.prevent="register" class="form neu-border">
-      <h2 class="form-heading">Register</h2>
+      <h2 class="form-heading" style="color:#00a1ff">Register</h2>
       <input
         class="form-input neu-border-inset"
         type="text"

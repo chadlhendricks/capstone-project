@@ -7,13 +7,13 @@
           <h1>Categories</h1>
 
           <ul style="color: white; text-align: center">
-            <li>Art</li>
-            <li>Funny</li>
-            <li>Anime</li>
-            <li>NSFW</li>
-            <li>Sport</li>
-            <li>Dank</li>
-            <li>DIY</li>
+            <li><a href="/">Art</a></li>
+            <li><a href="/">Funny</a></li>
+            <li><a href="/">Anime</a></li>
+            <li><a href="/">NSFW</a></li>
+            <li><a href="/">Sport</a></li>
+            <li><a href="/">Dank</a></li>
+            <li><a href="/">DIY</a></li>
           </ul>
         </div>
       </div>
@@ -50,7 +50,7 @@
           />
           <img
             src="https://picsum.photos/200/300?random=6"
-            class="logo"
+            class="logo" id="lastone"
             alt=""
           />
         </div>
@@ -58,10 +58,7 @@
 
         <!-- What's on your mind? -->
         <div class="main-feeling">
-
-          <div class="container">
-       
-          </div>
+          
         </div>
         <br />
 
@@ -128,7 +125,7 @@ export default {
 
 <style scoped>
 section {
-  background: #DAE0E6;
+  background: #d0d5da;
   min-height: 400vh;
 }
 
@@ -202,9 +199,10 @@ section {
   margin: auto;
   padding: 20px;
   height: 1;
-  width: 100%;
+  width: 30%;
   border-radius: 10px;
   background: rgba(128, 128, 128, 0.26);
+  position: fixed;
 }
 
 .panel3 {
@@ -267,5 +265,21 @@ textarea {
 
 ::placeholder {
   color: whitesmoke;
+}
+
+@media screen and (max-width: 767px) {
+  .panel1 {
+    display: none;
+  }
+  .panel3 {
+    display: none;
+  }
+  #lastone {
+    display: none;
+  }
+  .logos {
+    height: 50px
+  }
+
 }
 </style>

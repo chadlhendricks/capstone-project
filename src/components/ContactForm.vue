@@ -81,7 +81,7 @@ section {
 }
 
 .titles{
-  color: #fca311ff;
+  color: #00a1ff;
 }
 
 #messagebox{
@@ -112,7 +112,7 @@ label {
 /* BUTTONS AND THINGS */
 
 .bi{
-  color: #fca311ff;
+  color: #00a1ff;
   font-size: 35px
 }
 
@@ -124,6 +124,10 @@ label {
   border-radius: 50%;
   margin-bottom: 50px;
   padding-top: 50px;
+}
+
+.btn-danger {
+  background: #00a1ff;
 }
 
    

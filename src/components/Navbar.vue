@@ -3,13 +3,14 @@
   <input type="checkbox" id="nav-check">
   <div class="nav-header">
     <div class="nav-title">
-        <img
-          src="../assets/images/logo.png"
+      <a href="/">
+          <img src="../assets/images/logo.png"
           height="25px"
           alt="MDB Logo"
           loading="lazy"
           style="margin-top: -1px"
         />
+      </a>
     </div>
   </div>
   <div class="nav-btn">

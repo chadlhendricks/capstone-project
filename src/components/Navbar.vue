@@ -21,9 +21,9 @@
   </div>
   
   <div class="nav-links">
-    <a href="/login">Login</a>
-    <a href="/register">Register</a
-    >
+    <a href="/login" style="color:blue">Login</a>
+    <a href="/register" style="color:blue">Register</a>
+    <a href="/contact" style="color:blue">Contact</a>
   </div>
 </div>
 </template>
@@ -36,7 +36,7 @@
   box-sizing: border-box;
 }
 
-router-link {
+a {
   color: red;
 }
 

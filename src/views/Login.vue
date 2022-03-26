@@ -28,6 +28,10 @@
         Not a member?
         <router-link :to="{ name: 'Register' }">Create an account</router-link>
       </p>
+       <p>
+        Back to Home?
+        <router-link :to="{ name: 'Home' }">Home</router-link>
+      </p>
     </form>
   </section>
 </template>
@@ -42,7 +46,7 @@ export default {
   },
   methods: {
     login() {
-      fetch("http://localhost:4000/api/auth/login", {
+      fetch("https://thurs-social-media.herokuapp.com/api/auth/login", {
         method: "POST",
         body: JSON.stringify({
           email: this.email,
@@ -57,9 +61,9 @@ export default {
           if (json.jwt) {
             localStorage.setItem("jwt", json.jwt);
             alert("User logged in");
-            return this.$router.push({ name: "Posts" });
+            return this.$router.push({ name: "Home" });
           }
-          alert("cannot login");
+          alert("Cannot login");
         })
         .catch((err) => {
           alert(err);

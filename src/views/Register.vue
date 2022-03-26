@@ -34,12 +34,20 @@
         Already a member?
         <router-link :to="{ name: 'Login' }">Sign in</router-link>
       </p>
+      <p>
+        Back to Home?
+        <router-link :to="{ name: 'Home' }">Home</router-link>
+      </p>
     </form>
   </section>
 </template>
 
 <script>
+
+import Navbar from "@/components/Navbar.vue";
+
 export default {
+  
   name: "register",
   props: ["baseURL"],
   data() {
@@ -60,7 +68,7 @@ export default {
       };
 
       console.log(person);
-      fetch("https://thurs-social-media.herokuapp.com/api/auth", {
+      fetch("https://thurs-social-media.herokuapp.com/api/auth/", {
         method: "POST",
         body: JSON.stringify(person),
         headers: {
@@ -89,7 +97,6 @@ export default {
 section {
   background-image: url("https://picsum.photos/1920/1080");
   background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -102,13 +109,18 @@ form {
 
 .neu-border {
   border-radius: 30px;
-  background: #b4b2b2;
-  box-shadow: 8px 8px 15px #525151, -8px -8px 15px #5a5959;
+  background: #f5f5f56b;
+  box-shadow: 8px 8px 15px #616161, -8px -8px 15px #757575;
 }
+
+/* .neu-border {
+    border-radius: 30px;
+    background: #ffffff73;
+    box-shadow: 8px 8px 15px #403f3f, -8px -8px 15px #716f6f;} */
 .neu-border-inset {
   border-radius: 30px;
-  background: #70cab309;
-  box-shadow: inset 8px 8px 15px #9c9c9c, inset -8px -8px 15px #8a8989;
+  background: #818181;
+  box-shadow: inset 8px 8px 15px #5a5a5a, inset -8px -8px 15px #636262;
 }
 
 .form {
@@ -118,8 +130,8 @@ form {
   padding: 40px;
   gap: 20px;
   width: 100%;
-  max-width: 600px;
   margin-inline: auto;
+  max-width: 600px;
 }
 
 .form-heading {

@@ -21,9 +21,8 @@
   </div>
   
   <div class="nav-links">
-    <router-link @click="toggleNav" :to="{ name: 'Login' }">Login</router-link>
-    <router-link @click="toggleNav" :to="{ name: 'Register' }"
-      >Register</router-link
+    <a href="/login">Login</a>
+    <a href="/register">Register</a
     >
   </div>
 </div>

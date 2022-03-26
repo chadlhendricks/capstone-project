@@ -71,10 +71,11 @@
           <div class="card" v-for="post in posts" :key="posts.UserId">
             <img :src="post.img" class="card-img-top" alt="No Image" />
             <div class="card-body">
-              <img :src="post.user.profilePicture" class="profilepics" alt="">
-              <h5 class="card-title" v-if="post.user">{{ post.user.username }}</h5>
+              <!-- <img :src="post.user.profilePicture" class="profilepics" alt=""> -->
+              <!-- <h5 class="card-title" v-if="post.user">{{ post.user.username }}</h5> -->
               <p class="card-text">{{ post.desc }}</p>
               <p class="card-text">{{ post.likes.length }} likes</p>
+              
             </div>
           </div>
           <!--End of Card  -->
@@ -101,7 +102,7 @@ export default {
     };
   },
   mounted() { 
-    fetch("http://localhost:4000/api/posts/", {
+    fetch("https://thurs-social-media.herokuapp.com/api/posts", {
       method: "GET",
       header: {
         "Content-Type": "application/json",
@@ -113,15 +114,13 @@ export default {
       .then((data) => {
         console.log(data);
         data.forEach(async item => {
-          const response =  await fetch("http://localhost:4000/api/users/" + item.userId)
+          const response =  await fetch("https://thurs-social-media.herokuapp.com/api/posts" + item.userId)
           const person = await response.json()
           console.log(person)
           item.user = person
         })
-
         console.log(data)
         this.posts = data;
-
       });
   },
 };
@@ -157,7 +156,7 @@ section {
 }
 
 .logo {
-  border-radius: 17px;
+  border-radius: 10px;
   height: 170px;
   display: inline-block;
   width: 15%;
@@ -203,7 +202,7 @@ section {
   margin: auto;
   padding: 20px;
   height: 1;
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
   background: rgba(128, 128, 128, 0.26);
 }

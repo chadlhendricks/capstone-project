@@ -100,6 +100,12 @@
               <p class="card-text">{{ post.desc }}</p>
               <p class="card-text">{{ post.likes.length }} likes</p>
             </div>
+            <div>
+              <div>
+                <div class="col-6" style="float: right; color: #00a1ff; font-weight: bold; font-size: 30px"><i class="bi bi-hand-thumbs-up"></i></div>
+                <div class="col-6" style="float: right; color: #00a1ff; font-weight: bold; font-size: 30px"><i class="bi bi-chat"></i></div>
+              </div>
+            </div>
           </div>
           <!--End of Card  -->
         </div>
@@ -154,7 +160,7 @@ export default {
 <style scoped>
 section {
   background: white;
-  min-height: 290vh;
+  min-height: 310vh;
 }
 
 .profilepics {

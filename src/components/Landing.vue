@@ -69,7 +69,7 @@
                   alt=""
                 />
 
-                <div style="display: inline-block; vertical-align: top">
+                <div style="display: inline-block; vertical-align: top;">
                   <textarea
                     style="resize: none"
                     class="form-control status-box"
@@ -289,10 +289,11 @@ textarea {
   background: white;
   border-radius: 25px;
   height: 35px;
+  width: 480px
 }
 
 ::placeholder {
-  color: whitesmoke;
+  color: black;
 }
 
 @media screen and (max-width: 767px) {

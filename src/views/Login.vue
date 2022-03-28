@@ -96,8 +96,9 @@ form {
 
 .neu-border {
   border-radius: 30px;
-  box-shadow: 8px 8px 15px #616161, -8px -8px 15px #757575;
-}
+  border: solid 1px black
+  
+  }
 
 /* .neu-border {
     border-radius: 30px;
@@ -105,7 +106,15 @@ form {
     box-shadow: 8px 8px 15px #403f3f, -8px -8px 15px #716f6f;} */
 .neu-border-inset {
   border-radius: 30px;
-  box-shadow: inset 8px 8px 15px #5a5a5a, inset -8px -8px 15px #636262;
+  border: solid 1px black
+}
+
+.form-input {
+  border: 1px solid black;
+}
+
+.form-btn {
+  background: #00a1ff;
 }
 
 .form {

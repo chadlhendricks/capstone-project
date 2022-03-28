@@ -154,7 +154,7 @@ export default {
 <style scoped>
 section {
   background: white;
-  min-height: 270vh;
+  min-height: 290vh;
 }
 
 .profilepics {
@@ -300,6 +300,14 @@ textarea {
   .panel1 {
     display: none;
   }
+  .main-stories {
+    height: 200px;
+  }
+
+   .main-feeling {
+    height: 200px;
+  }
+
   .panel3 {
     display: none;
   }

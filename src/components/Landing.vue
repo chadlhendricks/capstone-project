@@ -58,6 +58,34 @@
 
         <!-- What's on your mind? -->
         <div class="main-feeling">
+          <div class="container">
+            <form>
+              <div
+                style="display: inline-block; vertical-align: top; width: 100%"
+              >
+                <img
+                  src="https://picsum.photos/50/50?random=5"
+                  style="border-radius: 50%; display: inline-block"
+                  alt=""
+                />
+
+                <div style="display: inline-block; vertical-align: top">
+                  <textarea
+                    style="resize: none"
+                    class="form-control status-box"
+                    rows="2"
+                    placeholder="What's on your mind?"
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+            <br />
+
+            <div class="button-group pull-right">
+              <a href="#" class="btn btn-primary">Post</a>
+            </div>
+            
+          </div>
           
         </div>
         <br />
@@ -68,8 +96,8 @@
           <div class="card" v-for="post in posts" :key="posts.UserId">
             <img :src="post.img" class="card-img-top" alt="No Image" />
             <div class="card-body">
-              <!-- <img :src="post.user.profilePicture" class="profilepics" alt=""> -->
-              <!-- <h5 class="card-title" v-if="post.user">{{ post.user.username }}</h5> -->
+              <!-- <img :src="post.user.profilePicture" class="profilepics" alt="">
+              <h5 class="card-title" v-if="post.user">{{ post.user.username }}</h5> -->
               <p class="card-text">{{ post.desc }}</p>
               <p class="card-text">{{ post.likes.length }} likes</p>
               
@@ -258,7 +286,7 @@ li {
 
 textarea {
   border: none;
-  background: grey;
+  background: white;
   border-radius: 25px;
   height: 35px;
 }

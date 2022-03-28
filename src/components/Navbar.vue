@@ -22,9 +22,9 @@
   </div>
   
   <div class="nav-links">
-    <a href="/login" style="color:#00a1ff">Login</a>
-    <a href="/register" style="color:#00a1ff">Register</a>
-    <a href="/contact" style="color:#00a1ff">Contact</a>
+    <router-link :to="{ path: '/login' }" style="color:#00a1ff">Login</router-link>
+    <router-link :to="{ path: '/register' }" style="color:#00a1ff">Register</router-link>
+    <router-link :to="{ path: '/contact' }" style="color:#00a1ff">Contact</router-link>
   </div>
 </div>
 </template>

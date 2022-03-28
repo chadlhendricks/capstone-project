@@ -25,11 +25,31 @@
     <router-link :to="{ path: '/login' }" style="color:#00a1ff;"><i class="bi bi-person"></i>Login</router-link>
     <router-link :to="{ path: '/register' }" style="color:#00a1ff"><i class="bi bi-person-plus"></i>Register</router-link>
     <router-link :to="{ path: '/contact' }" style="color:#00a1ff"><i class="bi bi-chat-text"></i>Contact</router-link>
+
+    <button @click="logout()" type="button" class="btn">
+      <router-link to="/">Logout</router-link>
+    </button>
+
   </div>
 </div>
 </template>
 
-<script>  
+<script>
+export default {
+  data() {
+    return {
+      user: JSON.parse(localStorage.getItem("user")),
+      isLoggedIn: false
+    };
+  },
+  methods: {
+    logout() {
+      localStorage.clear();
+      alert("User logged out");
+    },
+  },
+}  
+
 </script>  
 
 <style scoped>

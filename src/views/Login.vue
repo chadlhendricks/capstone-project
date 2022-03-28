@@ -68,11 +68,18 @@ export default {
         .then((response) => response.json())
         .then((json) => {
           if (json.jwt) {
+            console.log("JSON", json);
             localStorage.setItem("jwt", json.jwt);
-            alert("User logged in");
-            return this.$router.push({ name: "Home" });
+            localStorage.setItem("user", JSON.stringify(json.user));
+            // localStorage.setItem("isAdmin", JSON.stringify(json.user.isAdmin));
+            // console.log(json.user)
+            this.$emit("login");
           }
-          alert("Cannot login");
+          if (localStorage.getItem("jwt")) {
+            this.$router.push({ name: "Home" });
+          } else {
+            alert("Incorrect credentials");
+          }
         })
         .catch((err) => {
           alert(err);

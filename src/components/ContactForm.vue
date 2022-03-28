@@ -2,7 +2,7 @@
 <section>
   <div class="sections">
 
-    <h1 class="headings">Contact Me</h1><br>
+    <h1 class="headings">Contact Us</h1><br>
 
     <!--CONTACT BUTTONS-->
 
@@ -16,12 +16,12 @@
       <div class='col-sm-auto col-md-auto col-lg- col-xl- col-xxl'>
         <i class="bi bi-envelope"></i><br>
         <p class="titles">Email</p>
-        <p>chadlhendricks@gmail.com</p>
+        <p>theddit@gmail.com</p>
       </div>
 
       <div class='col-sm-auto col-md-auto col-lg- col-xl- col-xxl'>
         <i class="bi bi-phone"></i><br>
-        <p class="titles">Call Me On</p>
+        <p class="titles">Call Us On</p>
         <p>+27 67 020 2386</p>
       </div>
     </div>
@@ -76,8 +76,9 @@
 <style scoped>
 
 section {
-  background: black;
+  background: white;
   min-height: 80vh;
+  padding-top: 100px
 }
 
 .titles{
@@ -90,11 +91,10 @@ section {
 
 input{
   border-radius: 25px;
-  border: none;
 }
 
 .row{
-  color: white;
+  color: black;
   text-align: ce;
 }
 

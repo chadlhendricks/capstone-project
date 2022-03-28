@@ -1,5 +1,5 @@
 <template>
- <footer class="bg-dark text-center text-white">
+ <footer class="bg-dark text-center text-red">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -45,7 +45,12 @@ export default {
 </script>
 <style scoped>
 footer {
+  bottom: 0;
+  position: relative;
   height: 20vh;
+  width: 100%;
+  z-index: 203;
+  background-color: rgba(128, 128, 128, 0.26)
 }
 
 .bi {
@@ -53,7 +58,8 @@ footer {
 }
 
 .bi:hover {
-  color: #FB8500;
+  color: #00a1ff;
 }
+
   
 </style>

@@ -1,4 +1,6 @@
 <template>
+<Navbar/>
+
   <section>
     <form @submit.prevent="login" class="form neu-border">
       <h2 class="form-heading" style="color: #00a1ff">Login</h2>
@@ -37,12 +39,17 @@
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue";
+
 export default {
   data() {
     return {
       email: "",
       password: "",
     };
+  },
+  components: {
+    Navbar,
   },
   methods: {
     login() {
@@ -75,7 +82,7 @@ export default {
 
 <style scoped>
 section {
-  background-image: url("https://picsum.photos/1920/1080");
+  background-color: white;
   background-size: cover;
   height: 100vh;
 }
@@ -89,7 +96,6 @@ form {
 
 .neu-border {
   border-radius: 30px;
-  background: #f5f5f56b;
   box-shadow: 8px 8px 15px #616161, -8px -8px 15px #757575;
 }
 
@@ -99,7 +105,6 @@ form {
     box-shadow: 8px 8px 15px #403f3f, -8px -8px 15px #716f6f;} */
 .neu-border-inset {
   border-radius: 30px;
-  background: #818181;
   box-shadow: inset 8px 8px 15px #5a5a5a, inset -8px -8px 15px #636262;
 }
 

@@ -37,6 +37,17 @@
   box-sizing: border-box;
 }
 
+.bi {
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.router-link-active {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  }
+
 span {
   background-color: #00a1ff;
 }
@@ -53,7 +64,7 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: #DAE0E6;
+  background-color: white;
   position: fixed;
   z-index: 200;
 }

@@ -153,8 +153,8 @@ export default {
 
 <style scoped>
 section {
-  background: #d0d5da;
-  min-height: 400vh;
+  background: white;
+  min-height: 270vh;
 }
 
 .profilepics {
@@ -166,6 +166,10 @@ section {
 
 .card {
   margin-top: 20px;
+}
+
+.card:hover {
+  
 }
 
 .card-title {
@@ -226,7 +230,7 @@ section {
 .panel1 {
   margin: auto;
   padding: 20px;
-  height: 1;
+  height: 100%;
   width: 30%;
   border-radius: 10px;
   background: rgba(128, 128, 128, 0.26);
@@ -245,7 +249,7 @@ section {
 
 .panel4 {
   margin: auto;
-  height: 30%;
+  height: 100%;
   width: 80%;
   border-radius: 10px;
   margin-top: 10%;

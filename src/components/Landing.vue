@@ -158,6 +158,12 @@ export default {
 </script>
 
 <style scoped>
+
+i:hover {
+  font-size: 35px;
+  font-weight: bold;
+}
+
 section {
   background: white;
   min-height: 310vh;

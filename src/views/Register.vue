@@ -2,10 +2,6 @@
 
 <Navbar/>
 
-
-
-
-
   <section>
     <form @submit.prevent="register" class="form neu-border">
       <h2 class="form-heading" style="color:#00a1ff">Register</h2>
@@ -47,11 +43,15 @@
       </p>
     </form>
   </section>
+  <Footer/>
+
 </template>
 
 <script>
 
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
+
 
 export default {
   
@@ -66,7 +66,7 @@ export default {
     };
   },
   components: {
-    Navbar,
+    Navbar, Footer
   },
   methods: {
     register() {

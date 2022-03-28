@@ -1,6 +1,5 @@
 <template>
 <Navbar/>
-
   <section>
     <form @submit.prevent="login" class="form neu-border">
       <h2 class="form-heading" style="color: #00a1ff">Login</h2>
@@ -36,10 +35,13 @@
       </p>
     </form>
   </section>
+  <Footer/>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
+
 
 export default {
   data() {
@@ -49,7 +51,7 @@ export default {
     };
   },
   components: {
-    Navbar,
+    Navbar, Footer
   },
   methods: {
     login() {

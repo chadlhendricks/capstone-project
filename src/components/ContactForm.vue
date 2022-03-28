@@ -7,19 +7,19 @@
     <!--CONTACT BUTTONS-->
 
     <div class="row" style="text-align: center">
-      <div class='col-sm-auto col-md-auto col-lg- col-xl- col-xxl'>
+      <div class='col-sm-4'>
         <i class="bi bi-geo-alt"></i><br>
         <p class="titles">Location</p>
         <p>Cape Town, South Africa  </p>
       </div>
 
-      <div class='col-sm-auto col-md-auto col-lg- col-xl- col-xxl'>
+      <div class='col-sm-4'>
         <i class="bi bi-envelope"></i><br>
         <p class="titles">Email</p>
         <p>theddit@gmail.com</p>
       </div>
 
-      <div class='col-sm-auto col-md-auto col-lg- col-xl- col-xxl'>
+      <div class='col-sm-4'>
         <i class="bi bi-phone"></i><br>
         <p class="titles">Call Us On</p>
         <p>+27 67 020 2386</p>
@@ -95,7 +95,7 @@ input{
 
 .row{
   color: black;
-  text-align: ce;
+  text-align: center;
 }
 
 .contactform.col-sm-6 {

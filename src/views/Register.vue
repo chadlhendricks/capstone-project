@@ -88,13 +88,10 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          if (json.jwt) {
-            localStorage.setItem("jwt", json.jwt);
-            this.$router.push({ name: "Home" });
-            alert("You are now registered");
-          } else {
-            alert("Incorrect Credentials try again");
-          }
+          console.log(json);
+          alert("User registered");
+          localStorage.setItem("jwt", json.jwt);
+          this.$router.push({ name: "Login" });
         })
         .catch((err) => {
           alert(err);

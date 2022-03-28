@@ -238,7 +238,7 @@ section {
 .panel1 {
   margin: auto;
   padding: 20px;
-  height: 100%;
+  height: 90%;
   width: 30%;
   border-radius: 10px;
   background: rgba(182, 182, 182, 0.26);
@@ -257,7 +257,7 @@ section {
 
 .panel4 {
   margin: auto;
-  height: 100%;
+  height: 68%;
   width: 80%;
   border-radius: 10px;
   margin-top: 10%;

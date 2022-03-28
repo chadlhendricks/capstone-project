@@ -45,7 +45,6 @@ export default {
 </script>
 <style scoped>
 footer {
-  bottom: 0;
   position: relative;
   height: 20vh;
   width: 100%;

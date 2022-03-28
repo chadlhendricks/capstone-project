@@ -309,6 +309,15 @@ textarea {
   .logos {
     height: 50px
   }
+  .container {
+   padding-top: 0px;
+}
+.main-window {
+  padding-top: 30px;
+  margin: auto;
+  width: 90%;
+}
+
 
 }
 

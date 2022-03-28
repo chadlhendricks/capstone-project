@@ -5,16 +5,6 @@
       <div class="col-md-4 mb-5" id="col1">
         <div class="panel1">
           <h1>Categories</h1>
-
-          <ul style="color: white; text-align: center">
-            <li><a href="/">Art</a></li>
-            <li><a href="/">Funny</a></li>
-            <li><a href="/">Anime</a></li>
-            <li><a href="/">NSFW</a></li>
-            <li><a href="/">Sport</a></li>
-            <li><a href="/">Dank</a></li>
-            <li><a href="/">DIY</a></li>
-          </ul>
         </div>
       </div>
 
@@ -50,7 +40,8 @@
           />
           <img
             src="https://picsum.photos/200/300?random=6"
-            class="logo" id="lastone"
+            class="logo"
+            id="lastone"
             alt=""
           />
         </div>
@@ -69,7 +60,7 @@
                   alt=""
                 />
 
-                <div style="display: inline-block; vertical-align: top;">
+                <div style="display: inline-block; vertical-align: top">
                   <textarea
                     style="resize: none"
                     class="form-control status-box"
@@ -84,23 +75,30 @@
             <div class="button-group pull-right">
               <a href="#" class="btn btn-primary">Post</a>
             </div>
-            
           </div>
-          
         </div>
         <br />
 
         <!-- Posts -->
         <div class="main-window" v-if="posts">
           <!--Start of Card  -->
-          <div class="card" v-for="post in posts" :key="posts.UserId">
-            <img :src="post.img" class="card-img-top" alt="No Image" />
+          <div
+            class="card"
+            v-for="post in posts"
+            :key="posts.UserId"
+            data-mdb-toggle="animation"
+            data-mdb-animation-reset="true"
+            data-mdb-animation="slide-out-right"
+          >
+            <div >
+              <img :src="post.img" class="card-img-top hover-zoom" alt="No Image" />
+            </div>
+
             <div class="card-body">
               <!-- <img :src="post.user.profilePicture" class="profilepics" alt="">
               <h5 class="card-title" v-if="post.user">{{ post.user.username }}</h5> -->
               <p class="card-text">{{ post.desc }}</p>
               <p class="card-text">{{ post.likes.length }} likes</p>
-              
             </div>
           </div>
           <!--End of Card  -->
@@ -126,7 +124,7 @@ export default {
       posts: null,
     };
   },
-  mounted() { 
+  mounted() {
     fetch("https://thurs-social-media.herokuapp.com/api/posts", {
       method: "GET",
       header: {
@@ -138,13 +136,15 @@ export default {
       })
       .then((data) => {
         console.log(data);
-        data.forEach(async item => {
-          const response =  await fetch("https://thurs-social-media.herokuapp.com/api/posts" + item.userId)
-          const person = await response.json()
-          console.log(person)
-          item.user = person
-        })
-        console.log(data)
+        data.forEach(async (item) => {
+          const response = await fetch(
+            "https://thurs-social-media.herokuapp.com/api/posts" + item.userId
+          );
+          const person = await response.json();
+          console.log(person);
+          item.user = person;
+        });
+        console.log(data);
         this.posts = data;
       });
   },
@@ -169,7 +169,7 @@ section {
 }
 
 .card-title {
-    text-align: start;
+  text-align: start;
 }
 
 .card-text {
@@ -259,7 +259,7 @@ h1 {
   border-left: none;
   border-right: none;
   border-top: none;
-  color: #00a1ff
+  color: #00a1ff;
 }
 
 /* #col1 {
@@ -289,7 +289,7 @@ textarea {
   background: white;
   border-radius: 25px;
   height: 35px;
-  width: 480px
+  width: 480px;
 }
 
 ::placeholder {
@@ -307,18 +307,16 @@ textarea {
     display: none;
   }
   .logos {
-    height: 50px
+    height: 50px;
   }
   .container {
-   padding-top: 0px;
-}
-.main-window {
-  padding-top: 30px;
-  margin: auto;
-  width: 90%;
-}
-
-
+    padding-top: 0px;
+  }
+  .main-window {
+    padding-top: 30px;
+    margin: auto;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 1845px) {

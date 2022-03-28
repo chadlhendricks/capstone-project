@@ -22,7 +22,7 @@
   </div>
   
   <div class="nav-links">
-    <router-link :to="{ path: '/login' }" style="color:#00a1ff"><i class="bi bi-person"></i>Login</router-link>
+    <router-link :to="{ path: '/login' }" style="color:#00a1ff;"><i class="bi bi-person"></i>Login</router-link>
     <router-link :to="{ path: '/register' }" style="color:#00a1ff"><i class="bi bi-person-plus"></i>Register</router-link>
     <router-link :to="{ path: '/contact' }" style="color:#00a1ff"><i class="bi bi-chat-text"></i>Contact</router-link>
   </div>
@@ -63,10 +63,11 @@ body {
   background-color: black;
   position: fixed;
   z-index: 200;
+  
 }
 
 label {
-  background-color: #00a1ff
+  background-color: transparent;
 }
 
 .nav > .nav-header {

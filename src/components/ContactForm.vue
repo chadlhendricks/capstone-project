@@ -2,7 +2,7 @@
 <section>
   <div class="sections">
 
-    <h1 class="headings">Contact Us</h1><br>
+    <h1 class="headings" style="color: #00a1ff">Contact Us</h1><br>
 
     <!--CONTACT BUTTONS-->
 
@@ -113,7 +113,7 @@ label {
 
 .bi{
   color: #00a1ff;
-  font-size: 35px
+  font-size: 35px;
 }
 
 .d-block{

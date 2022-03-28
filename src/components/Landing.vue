@@ -168,10 +168,6 @@ section {
   margin-top: 20px;
 }
 
-.card:hover {
-
-}
-
 .card-title {
     text-align: start;
 }
@@ -198,7 +194,7 @@ section {
 
 .row {
   height: 100vh;
-  padding-top: 60px;
+  padding-top: 80px;
   display: flex;
 }
 
@@ -211,14 +207,14 @@ section {
   height: 20vh;
   width: 100%;
   border-radius: 10px;
-  background: rgba(128, 128, 128, 0.26);
+  background: rgba(182, 182, 182, 0.26);
 }
 
 .main-stories {
   height: 20vh;
   width: 100%;
   border-radius: 10px;
-  background: rgba(128, 128, 128, 0.26);
+  background: rgba(182, 182, 182, 0.26);
 }
 
 .main-window {
@@ -233,7 +229,7 @@ section {
   height: 100%;
   width: 30%;
   border-radius: 10px;
-  background: rgba(128, 128, 128, 0.26);
+  background: rgba(182, 182, 182, 0.26);
   position: fixed;
 }
 
@@ -244,7 +240,7 @@ section {
   width: 80%;
   border-radius: 10px;
   position: fixed;
-  background: rgba(128, 128, 128, 0.26);
+  background: rgba(182, 182, 182, 0.26);
 }
 
 .panel4 {
@@ -254,16 +250,16 @@ section {
   border-radius: 10px;
   margin-top: 10%;
   position: fixed;
-  background: rgba(128, 128, 128, 0.26);
+  background: rgba(182, 182, 182, 0.26);
 }
 
 h1 {
   text-align: start;
   font-size: 20px;
-  color: white;
   border-left: none;
   border-right: none;
   border-top: none;
+  color: #00a1ff
 }
 
 /* #col1 {
@@ -314,5 +310,11 @@ textarea {
     height: 50px
   }
 
+}
+
+@media screen and (max-width: 1845px) {
+  #lastone {
+    display: none;
+  }
 }
 </style>

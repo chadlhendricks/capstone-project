@@ -239,7 +239,7 @@ section {
   margin: auto;
   padding: 20px;
   height: 100%;
-  width: 32.7%;
+  width: 30%;
   border-radius: 10px;
   background: rgba(182, 182, 182, 0.26);
   position: fixed;

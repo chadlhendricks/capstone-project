@@ -102,8 +102,8 @@
             </div>
             <div>
               <div>
-                <div class="col-6" style="float: right; color: #00a1ff; font-weight: bold; font-size: 30px"><i class="bi bi-hand-thumbs-up"></i></div>
-                <div class="col-6" style="float: right; color: #00a1ff; font-weight: bold; font-size: 30px"><i class="bi bi-chat"></i></div>
+                <div style="padding-left: 20px; padding-right: 20px; float: left; color: #00a1ff; font-weight: bold; font-size: 30px"><i class="bi bi-hand-thumbs-up"></i></div>
+                <div style="float: left; color: #00a1ff; font-weight: bold; font-size: 30px"><i class="bi bi-chat"></i></div>
               </div>
             </div>
           </div>

@@ -10,3 +10,7 @@ body {
 section {
     height: 100vh;
 }
+
+.form-input {
+    border: 1px solid black;
+}

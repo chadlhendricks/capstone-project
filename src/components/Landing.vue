@@ -58,7 +58,7 @@
 
         <!-- What's on your mind? -->
         <div class="main-feeling">
-          <div class="container">
+          <div class="container" style="padding-top: 30px">
             <form>
               <div
                 style="display: inline-block; vertical-align: top; width: 100%"
@@ -169,7 +169,7 @@ section {
 }
 
 .card:hover {
-  
+
 }
 
 .card-title {

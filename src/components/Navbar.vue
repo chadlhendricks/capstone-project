@@ -48,10 +48,6 @@
   font-style: italic;
   }
 
-span {
-  background-color: #00a1ff;
-}
-
 a {
   color: red;
 }
@@ -62,11 +58,15 @@ body {
 }
 
 .nav {
-  height: 50px;
+  height: 60px;
   width: 100%;
-  background-color: white;
+  background-color: black;
   position: fixed;
   z-index: 200;
+}
+
+label {
+  background-color: #00a1ff
 }
 
 .nav > .nav-header {

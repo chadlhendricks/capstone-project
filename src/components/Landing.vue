@@ -277,7 +277,7 @@ h1 {
 } */
 
 .btn-primary {
-  background-color: #fb8500;
+  background-color: #00a1ff;
 }
 
 li {

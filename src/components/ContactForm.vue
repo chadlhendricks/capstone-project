@@ -19,7 +19,7 @@
         <p>theddit@gmail.com</p>
       </div>
 
-      <div class='col-sm-4'>
+      <div class='col-sm-auto col-md-auto col-lg- col-xl- col-xxl'>
         <i class="bi bi-phone"></i><br>
         <p class="titles">Call Us On</p>
         <p>+27 67 020 2386</p>

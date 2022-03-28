@@ -89,6 +89,32 @@ section {
   height: 100vh;
 }
 
+.form-heading {
+  -webkit-animation: form-heading 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: form-heading 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes form-heading {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+
 form {
   position: fixed;
   top: 50%;
